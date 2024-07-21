@@ -10,7 +10,7 @@ export const Sidebar = async () => {
 
   return (
     <li className={styles.sidebar}>
-      {data.page.edges.map(({node}) => <ul key={node.id}><Link href={node.title.replace( /\s/g, '-')}>{node.title}</Link></ul>)}
+      {data.page.edges.map(({node}) => <ul key={node.id}><Link href={node.title.replace( /\s/g, '_')}>{node.title}</Link></ul>)}
     </li>
   )
 }

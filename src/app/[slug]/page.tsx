@@ -18,7 +18,7 @@ export default function GalleryItem() {
   const pathname = usePathname();
 
   const { data } = useSuspenseQuery(movieByTitle, {
-    variables: { title: pathname.substring(1).split("-").join(" ") },
+    variables: { title: pathname.substring(1).split("_").join(" ") },
   });
 
   return (
