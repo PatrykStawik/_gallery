@@ -1,0 +1,15 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-size: 24px;
+    letter-spacing: 15px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

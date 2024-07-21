@@ -1,0 +1,20 @@
+.sidebar {
+  padding: 10px;
+  margin-top: 40px;
+  position: absolute;
+  z-index: 100;
+
+  ul {
+    padding: 10px 0;
+    
+    a {
+      transition: all .5s;
+    }
+   
+
+    & a:hover {
+      color: blue;
+      cursor: pointer;
+    }
+  }
+}

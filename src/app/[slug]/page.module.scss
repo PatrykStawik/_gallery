@@ -1,0 +1,22 @@
+.main {
+  height: calc(100vh - 80px);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__slider {
+
+    &Wrapper {
+      height: 100%;
+      width: 75%;
+    }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}
+
