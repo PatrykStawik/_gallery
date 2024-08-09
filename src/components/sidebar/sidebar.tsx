@@ -6,7 +6,7 @@ import { moviesTitles } from '@/queries/movies';
 import styles from './sidebar.module.scss';
 
 export const Sidebar = async () => {
-  const { data } = await getClient().query({ query: moviesTitles });
+  const { data } = await getClient().query({ query: moviesTitles});
 
   return (
     <li className={styles.sidebar}>

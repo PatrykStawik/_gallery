@@ -35,16 +35,11 @@ query galleryMovies(
 
 export const moviesTitles = gql(`
 query galleryMoviesTitles(
-  $first: Int
-  $skip: Int
   $where: MoviesWhereInput
-  $orderBy: MoviesOrderByInput
 ) {
   page: movies_idConnection(
-    first: $first
-    skip: $skip
     where: $where
-    orderBy: $orderBy
+    orderBy: title_ASC
   ) {
     edges {
       node {
