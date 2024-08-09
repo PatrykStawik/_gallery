@@ -2,6 +2,7 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import NextTopLoader from 'nextjs-toploader';
 
 import { Header } from '@/components/header';
 import { Sidebar } from '@/components/sidebar';
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <NextTopLoader color='blue' height={3} showSpinner={false} speed={500}/>
         <ApolloWrapper>
           <Header />
           <Sidebar />
