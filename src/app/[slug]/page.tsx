@@ -24,35 +24,39 @@ export default function GalleryItem() {
   return (
     <main className={styles.main}>
       <div className={styles.main__sliderWrapper}>
-      {data ? (
-        <Swiper
-        autoplay={{delay: 200}}
-        grabCursor={true}
-        effect='creative'
-        modules={[EffectCreative]}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
-        }}
-        >
-          {data.movies?.images.map((i) => (
-            <SwiperSlide key={i.id} className={styles.main__sliderSlide}>
-              <Image
-                objectFit='contain'
-                fill
-                src={i.url}
-                alt={data.movies?.title ?? ""}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : null}
+        {data ? (
+          <Swiper
+            autoplay={{ delay: 200 }}
+            grabCursor={true}
+            effect="creative"
+            modules={[EffectCreative]}
+            creativeEffect={{
+              prev: {
+                shadow: true,
+                translate: [0, 0, -400],
+              },
+              next: {
+                translate: ['100%', 0, 0],
+              },
+            }}
+          >
+            {data.movies?.images.map((i) => (
+              <SwiperSlide key={i.id} className={styles.main__sliderSlide}>
+                <Image
+                  objectFit="contain"
+                  fill
+                  src={i.url}
+                  alt={data.movies?.title ?? ""}
+                  priority
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          null
+        )}
       </div>
     </main>
   );
 }
+
